@@ -21,7 +21,7 @@ module Mws::Apis::Feeds
       Mws::Serializer.tree name, parent do |xml|
         xml.SKU @sku
         xml.StandardProductID {
-          xml.Type 'UPC'
+          xml.Type 'EAN'#'UPC'
           xml.Value @upc
         } unless @upc.nil?
         xml.ProductTaxCode @tax_code unless @upc.nil?
